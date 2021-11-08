@@ -1,28 +1,47 @@
-const api = require("express").Router();
+const fs = require("fs");
+var data  = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
 
-api.get("/", (req, res) => {
-  readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
+module.exports = (app) => {
+api.get("/api/notes", (req, res) => {
+  res.json(data);
 });
 
-api.post("/", (req, res) => {
-  console.log(req.body);
-
-  const { isValid, errors } = req.body;
-
-  const payload = {
-    title,
-    text,
-  };
-
-  if (!isValid) {
-    readAndAppend(payload, "./db/db.json");
-    res.json(`??? information added 🔧`);
-  } else {
-    res.json({
-      message: "Object is valid, not logging. Check front end implementation",
-      error_id: payload.error_id,
-    });
-  }
+app.get('/api/notes.:id', (req, res) => {
+  res.json(data[Number(req.params.id)]);
 });
 
-module.exports = api;
+api.post("/api/notes", (req, res) => {
+  let newNote = req.body;
+  let uniqueID = (data.length).toString();
+  newNote.id = uniqueID;
+  data.push(newNote);
+
+  fs.writeFile("./db/db.json", JSON.stringify(data), function(err) {
+    if (err) throw (err);
+  })
+
+  res.json(data);
+
+});
+}
+  // console.log(req.body);
+
+  // const { isValid, errors } = req.body;
+
+  // const payload = {
+  //   title,
+  //   text,
+  // };
+
+//   if (!isValid) {
+//     readAndAppend(payload, "./db/db.json");
+//     res.json(`??? information added 🔧`);
+//   } else {
+//     res.json({
+//       message: "Object is valid, not logging. Check front end implementation",
+//       error_id: payload.error_id,
+//     });
+//   }
+// });
+
+// module.exports = api;
