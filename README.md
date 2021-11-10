@@ -1,27 +1,27 @@
 # Note Taker
+Created by: Jackson Barker
+ 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 This app allows the user to write and save notes. Providing an application for the user to write and keep track of task.
 
 ## Table of Contents
 
-- [User Story](#UserStory)
-- [Usage](#usage)
-- [Credits](#credits)
+- [UserStory](#userStory)
+- [Acceptance Criteria](#AcceptanceCriteria)
 - [License](#license)
-- [Github Profile](#github)
+- [Github](#github)
 - [Email](#email)
 - [Screenshot](#screenshot)
-- [Contribute](#contribution)
-- [Tests](#tests)
+- [Links](#Links)
 
-## User Story 
+## UserStory 
 
 AS A small business owner
 I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
-## Acceptance Criteria
+## AcceptanceCriteria
 
 GIVEN a note-taking application
 WHEN I open the Note Taker
@@ -37,14 +37,24 @@ THEN that note appears in the right-hand column
 WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
-## Credits
-
 ## License
 MIT
-## Github Profile
+## Github 
+
  <a href="https://github.com/Jackson-Barker">GitHub Profile Link</a> 
-## Email Address
+
+## Email 
+
 <a href="mailto:barkerwjackson@gmail.com">Email</a>
+
 ## Screenshot
 
+![Note Taker Home Page SS](./public/assets/photos/notetakerhome.png)
 
+![Note Taker Notes Page SS](./public/assets/photos/notetakernotes.png)
+
+## Links
+
+<a href="https://github.com/Jackson-Barker/Note-Taker">GitHub Note Taker Link</a>
+
+<a href="https://gentle-gorge-16617.herokuapp.com/">Heroku Note Taker Link</a>
