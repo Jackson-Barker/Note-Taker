@@ -11,6 +11,7 @@ app.get('/api/notes/:id', (req, res) => {
 });
 
 app.post("/api/notes", (req, res) => {
+  console.log(req.body)
   let newNote = req.body;
   let uniqueID = (data.length).toString();
   newNote.id = uniqueID;

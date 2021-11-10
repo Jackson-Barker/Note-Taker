@@ -1,6 +1,6 @@
 // dependencies
 const express = require('express');
-const fs = require('fs');
+
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -21,7 +21,7 @@ app.use( express.static('public'));
 
 
 // app.use('./routes/indexRoutes', indexRoutes);
-require('./routes/notesRoutes')(app);
+require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 
 app.listen(PORT, () =>
