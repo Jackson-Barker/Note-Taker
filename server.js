@@ -17,7 +17,7 @@ app.use(express.urlencoded({
 
 
 app.use(express.json());
-app.use('/assets', express.static('./assets'));
+app.use( express.static('public'));
 
 
 // app.use('./routes/indexRoutes', indexRoutes);
