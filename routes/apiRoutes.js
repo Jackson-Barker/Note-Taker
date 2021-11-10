@@ -2,7 +2,7 @@ const fs = require("fs");
 var data  = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
 
 module.exports = (app) => {
-api.get("/api/notes", (req, res) => {
+app.get("/api/notes", (req, res) => {
   res.json(data);
 });
 
